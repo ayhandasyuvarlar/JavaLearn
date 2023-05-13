@@ -1,27 +1,27 @@
-import java.util.Scanner;
+import java.utl.Scanner;
 
 public class kdv {
     public static void main(String[] args) {
-        double total , kdvValue = 0.18 , kdvIndirimi = 0.8 ;
-        double kdvliFiyat ;
-        double kdvTutar ;
+        double total, kdvValue = 0.18, kdvdiscount = 0.8;
+        double kdvPrice;
+        double kdvTotal;
         Scanner input = new Scanner(System.in);
-        System.out.println("Toplam ödemiş olduğunuz tutar ne kadar ");
-        total = input.nextDouble() ; 
+        System.out.println("How much is the total amount you have paid");
+        total = input.nextDouble();
 
-        String indirim = total > 1000 ?  "uygulansın" : "uygulanmasın"  ;
-        
-        if(indirim == "uygulansın"){
-            kdvTutar = total * kdvIndirimi ; 
-            kdvliFiyat = total + kdvTutar ; 
-            System.out.println("KDV'li Fiyat  : " + kdvliFiyat);
-            System.out.println("Kdv Tutari  : " + kdvIndirimi);
-        }else {
-            kdvTutar = total * kdvValue ; 
-            kdvliFiyat = total + kdvTutar ; 
-            System.out.println("KDV'li Fiyat  : " + kdvliFiyat);
-            System.out.println("Kdv Tutari  : " + kdvValue);
-        }     
+        String discount = total > 1000 ? "to apply" : "not to apply";
+
+        if (discount == "to apply") {
+            kdvTotal = total * kdvdiscount;
+            kdvPrice = total + kdvTotal;
+            System.out.println("Price with KDV : " + kdvPrice);
+            System.out.println("KDV Amount : " + kdvdiscount);
+        } else {
+            kdvTotal = total * kdvValue;
+            kdvPrice = total + kdvTotal;
+            System.out.println("Price with KDV : " + kdvPrice);
+            System.out.println("KDV Amount : " + kdvValue);
+        }
 
     }
 }
