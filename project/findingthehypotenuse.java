@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-public class hipotenüsbulma {
+public class findingthehypotenuse {
     public static void main(String[] args) {
         int a, b;
         double c;
         Scanner inp = new Scanner(System.in);
-        System.out.println("A kenarının uzunlugu");
+        System.out.println("length of side A");
         a = inp.nextInt();
-        System.out.println("B kenarının uzunlugu");
+        System.out.println("length of side B");
         b = inp.nextInt();
 
         c = Math.sqrt((a * a) + (b * b));
